@@ -1,5 +1,5 @@
-export  interface activityList{
-    activityType : string
-    ul_cant_os : string
-    ul_os_json : string
+export interface activityList{
+    activityType: String
+    ul_cant_os: String
+    ul_os_json: String
 }

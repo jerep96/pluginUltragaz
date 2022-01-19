@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    
+
     <!-- Google Icons -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
@@ -11,10 +11,7 @@
   <body>
     <div class="container mt-4">
         <h2>Ordens de serviço</h2>
-        <p>{{activityList}}</p>
-        <div *ngFor="let activity of activityList">
-          <p>{{activity.activityType}}</p>
-        </div>
+        <p *ngFor="let activity of activityList">{{ activity.activityType }}</p>
         <div class="accordion" id="accordionExample">
           <div *ngFor="let blocos of activity.info.ul_os_json; let i = index">
             <div class="accordion-item">

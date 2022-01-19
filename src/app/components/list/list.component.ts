@@ -8,31 +8,29 @@ import { ActivityService } from 'src/app/services/activity.service';
   styleUrls: ['./list.component.css']
 })
 export class ListComponent implements OnInit {
-  
-  activityList:activityList[] = []
+
+  activityList: activityList[] = [];
 
   constructor(public activity:ActivityService) {
   }
-
-  
 
   completeActivities(ordenServicio:any){
     let completas : number = 0
     for(let val of ordenServicio){
       if(val.activityStatus == 'finalized'){
         completas = completas +1
-      } 
+      }
     }
   return completas}
 
   ngOnInit(): void {
-    this.activity.getActivity().subscribe(data => { 
+    this.activity.getActivity().subscribe(data => {
       this.activityList = data;
-      console.log(data)
+      console.log(this.activityList)
     })
-    
+
   }
 
-  
+
 
 }
